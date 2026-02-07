@@ -38,19 +38,19 @@ def home():
     </style>
 
     <form action="/result">
-        <input type="image" src="/static/CENA.jpg" name="vara" value="1">
-        <input type="image" src="/static/ORT.jpg" name="vara" value="2">
-        <input type="image" src="/static/GUDA.jpg" name="vara" value="3">
-        <input type="image" src="/static/SINEDRIJU.jpg" name="vara" value="4">
-        <input type="image" src="/static/MARBUT.jpg" name="vara" value="5">
-        <input type="image" src="/static/PILATU.jpg" name="vara" value="6">
-        <input type="image" src="/static/REDENTUR.jpg" name="vara" value="7">
-        <input type="image" src="/static/RABA' STAZZJON.jpg" name="vara" value="8">
-        <input type="image" src="/static/VERONICA.jpg" name="vara" value="9">
-        <input type="image" src="/static/VARA L-KBIRA.jpg" name="vara" value="10">
-        <input type="image" src="/static/PIETA'.jpg" name="vara" value="11">
-        <input type="image" src="/static/MONUMENT.jpg" name="vara" value="12">
-        <input type="image" src="/static/DULURI.jpg" name="vara" value="13">
+        <input type="image" src="/static/cena.jpg" name="vara" value="1">
+        <input type="image" src="/static/ort.jpg" name="vara" value="2">
+        <input type="image" src="/static/guda.jpg" name="vara" value="3">
+        <input type="image" src="/static/sinedriju.jpg" name="vara" value="4">
+        <input type="image" src="/static/marbut.jpg" name="vara" value="5">
+        <input type="image" src="/static/pilatu.jpg" name="vara" value="6">
+        <input type="image" src="/static/redentur.jpg" name="vara" value="7">
+        <input type="image" src="/static/raba_stazzjon.jpg" name="vara" value="8">
+        <input type="image" src="/static/veronica.jpg" name="vara" value="9">
+        <input type="image" src="/static/vara_l_kbira.jpg" name="vara" value="10">
+        <input type="image" src="/static/pieta.jpg" name="vara" value="11">
+        <input type="image" src="/static/monument.jpg" name="vara" value="12">
+        <input type="image" src="/static/duluri.jpg" name="vara" value="13">
     </form>
     """
 
@@ -83,3 +83,4 @@ def result():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=10000)
+
