@@ -25,34 +25,55 @@ def home():
     return """
     <h1>Merhba Ghal Gimgha L-Kbira Ta Hal Qormi San Gorg</h1>
 
+    <style>
+        img {
+            width: 180px;
+            margin: 10px;
+            cursor: pointer;
+            border: 2px solid #ccc;
+        }
+        img:hover {
+            border-color: black;
+        }
+    </style>
+
     <form action="/result">
-        <label>Ghazel Il Vara Li Qed Tara:</label><br><br>
-
-        <select name="vara">
-            <option value="1">Cena</option>
-            <option value="2">Ort</option>
-            <option value="3">Guda</option>
-            <option value="4">Sinedriju</option>
-            <option value="5">Marbut</option>
-            <option value="6">Pilatu</option>
-            <option value="7">Redentur</option>
-            <option value="8">Raba Stazzjon</option>
-            <option value="9">Veronica</option>
-            <option value="10">Vara L-Kbira</option>
-            <option value="11">Pieta</option>
-            <option value="12">Monument</option>
-            <option value="13">Duluri</option>
-        </select>
-
-        <br><br>
-        <button type="submit">Ara</button>
+        <input type="image" src="/static/CENA.jpg" name="vara" value="1">
+        <input type="image" src="/static/ORT.jpg" name="vara" value="2">
+        <input type="image" src="/static/GUDA.jpg" name="vara" value="3">
+        <input type="image" src="/static/SINEDRIJU.jpg" name="vara" value="4">
+        <input type="image" src="/static/MARBUT.jpg" name="vara" value="5">
+        <input type="image" src="/static/PILATU.jpg" name="vara" value="6">
+        <input type="image" src="/static/REDENTUR.jpg" name="vara" value="7">
+        <input type="image" src="/static/RABA' STAZZJON.jpg" name="vara" value="8">
+        <input type="image" src="/static/VERONICA.jpg" name="vara" value="9">
+        <input type="image" src="/static/VARA L-KBIRA.jpg" name="vara" value="10">
+        <input type="image" src="/static/PIETA'.jpg" name="vara" value="11">
+        <input type="image" src="/static/MONUMENT.jpg" name="vara" value="12">
+        <input type="image" src="/static/DULURI.jpg" name="vara" value="13">
     </form>
     """
 
+
+
 @app.route("/result")
 def result():
-    vara = request.args.get("vara")
+    @app.route("/result")
+    def result():
+    # Image buttons send vara.x / vara.y, so we detect which one was clicked
+        vara = None
+    for key in request.args:
+        if key.startswith("vara"):
+            vara = request.args.get(key)
+            break
+
     text = responses.get(vara, "Kellek Taghzel Minn 1-13")
+
+    return f"""
+    <h2>{text}</h2>
+    <a href="/">Mur lura</a>
+    """
+
 
     # Show result and link back
     return f"""
